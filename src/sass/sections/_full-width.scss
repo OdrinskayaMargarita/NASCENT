@@ -1,0 +1,9 @@
+.full-width__image {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  @include object-fit(cover);
+  @media (orientation: portrait) {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  $padding: 30px;
+  padding-left: $padding;
+  padding-right: $padding;
+
+  @media (min-width: 2160px) {
+    $padding: 56px;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+
+  // @media (max-width: $lg) {
+  //   padding: 0 60px;
+  // }
+  //
+  // @media (max-width: $md) {
+  //   padding: 0 45px;
+  // }
+
+  @media (max-width: $sm) {
+    $padding: 15px;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
+.container--full-width {
+  max-width: none;
+}

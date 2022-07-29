@@ -1,0 +1,64 @@
+.quote__content {
+  padding: 55px 30px;
+  @media (max-width: $lg) {
+    padding: 55px 15px;
+  }
+  @media (max-width: $sm) {
+    padding: 32px 15px;
+  }
+}
+
+.quote__text {
+  font-size: 60px;
+  line-height: (72/60);
+  font-weight: 300;
+  @media (min-width: 2160px) {
+    font-size: 75px;
+  }
+  @media (max-width: $xl) {
+    font-size: 44px;
+  }
+  @media (max-width: $lg) {
+    font-size: 36px;
+  }
+  @media (max-width: $md) {
+    font-size: 30px;
+  }
+  @media (max-width: $sm) {
+    font-size: 22.5px;
+  }
+
+  p {
+    &:first-child {
+      &::before {
+        content: "“";
+      }
+    }
+    &:last-child {
+      &::after {
+        content: "”";
+      }
+    }
+  }
+}
+
+.quote__author {
+  margin-top: 71px;
+  text-align: right;
+  font-size: 28px;
+  @media (min-width: 2160px) {
+    font-size: 40px;
+  }
+  @media (max-width: $xl) {
+    margin-top: 48px;
+  }
+  @media (max-width: $sm) {
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+  &::before {
+    content: "— ";
+    font-weight: 300;
+  }
+}

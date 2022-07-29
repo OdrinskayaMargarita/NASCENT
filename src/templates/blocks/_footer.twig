@@ -1,0 +1,44 @@
+<footer class="footer{% if footer %} footer--footer{% endif %}">
+    <div class="footer__container container">
+        <div class="footer__links">
+            <a class="footer__logo" href="/">
+                {% include 'img/_logo.twig' %}
+            </a>
+            <ul class="footer__social">
+                <li>
+                    <a class="footer__link footer__link--social" href="#">
+                        {% include 'img/_arrow-right.twig' %}
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer__link footer__link--social" href="#">
+                        {% include 'img/_arrow-right.twig' %}
+                        <span>Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer__link footer__link--social" href="#">
+                        {% include 'img/_arrow-right.twig' %}
+                        <span>LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="footer__link footer__link--social" href="#">
+                        {% include 'img/_arrow-right.twig' %}
+                        <span>Twitter</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="footer__privacy footer__link" href="#">
+                {% include 'img/_arrow-right.twig' %}
+                <span>Privacy Policy</span>
+            </a>
+        </div>
+        {% if copyright %}
+          <div class="footer__copyright">
+              &copy;2020 All Rights Reserved / P. Iva­_04265640963
+          </div>
+        {% endif %}
+    </div>
+</footer>

@@ -1,0 +1,126 @@
+$images-layout-gutter: 30px;
+$images-layout-gutter-xxxl: 60px;
+$images-layout-gutter-sm: 20px;
+
+.images-layout {
+  padding: $images-layout-gutter 0;
+  @media (min-width: 2160px) {
+    padding: $images-layout-gutter-xxxl 0;
+  }
+  @media (max-width: $sm) {
+    padding: $images-layout-gutter-sm 0 0;
+  }
+}
+
+.images-layout__container {
+  display: flex;
+  margin: 0 ($images-layout-gutter / -2);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @media (min-width: 2160px) {
+    margin: 0 ($images-layout-gutter-xxxl / -2);
+  }
+}
+
+.images-layout__img,
+.images-layout__text {
+  margin: 0 ($images-layout-gutter / 2);
+  width: calc(50% - #{$images-layout-gutter});
+  @media (min-width: 2160px) {
+    margin: 0 ($images-layout-gutter-xxxl / 2);
+    width: calc(50% - #{$images-layout-gutter-xxxl});
+  }
+}
+
+.images-layout__img {
+  @include object-fit(cover);
+  @media (max-width: $sm) {
+    margin: 0 0 $images-layout-gutter-sm;
+    width: 100%;
+  }
+}
+
+.images-layout__img--full-height {
+  height: calc(100vh - 60px);
+  @media (orientation: portrait) {
+    height: calc(50vh - 60px);
+  }
+  @media (max-width: $sm) {
+    height: calc(100vh - 60px);
+  }
+}
+
+.images-layout__img--half-height {
+  height: calc(50vh - 45px);
+  @media (orientation: portrait) {
+    height: calc(25vh - 45px);
+  }
+  @media (max-width: $sm) {
+    height: calc(50vh - 60px);
+  }
+}
+
+.images-layout__text {
+  align-self: flex-end;
+  font-size: 28px;
+  line-height: (39/28);
+  letter-spacing: -0.6px;
+  font-weight: 300;
+  @media (min-width: 2160px) {
+    font-size: 48px;
+  }
+  @media (max-width: $xl) {
+    font-size: 22px;
+  }
+  @media (max-width: $lg) {
+    padding-right: 0;
+    font-size: 20px;
+  }
+  @media (max-width: $sm) {
+    margin: 0 auto;
+    width: calc(100% - 60px);
+    font-size: 14px;
+  }
+
+  &:last-child {
+    padding-right: percentage(80/1414);
+    @media (max-width: $lg) {
+      padding-right: 0;
+    }
+  }
+
+  &:first-child {
+    padding-left: percentage(40/1414);
+    padding-right: percentage(40/1414);
+    @media (max-width: $lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .images-layout:last-child & {
+    @media (max-width: $sm) {
+      margin-bottom: 48px;
+    }
+  }
+
+  p {
+    margin-bottom: 30px;
+    @media (max-width: $sm) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.images-layout__text--align-top {
+  align-self: flex-start;
+
+  p {
+    &:first-child {
+      margin-top: 30px;
+      @media (max-width: $sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

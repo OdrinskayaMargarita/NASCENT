@@ -1,0 +1,14 @@
+---
+title: Work - Nascent
+description: Work description
+pageName: workPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {{ blocks.pageTitle('Work') }}
+        {{ blocks.pageDescription('Nascent develops, designs and delivers identities and creative campaigns that drive results,build awareness and win awards.') }}
+        {% include './sections/_works.twig' %}
+    </main>
+{% endblock %}

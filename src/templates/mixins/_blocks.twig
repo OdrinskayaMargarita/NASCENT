@@ -1,0 +1,97 @@
+{#
+PROTO
+{% macro macroName(arg) %}
+  {{ arg }}
+{% endmacro %}
+#}
+
+{% macro pageTitle(title) %}
+    <div class="page-title">
+        <div class="container container--full-width">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro pageDescription(description) %}
+  <div class="page-description fade-in__container fade-in__animated-start">
+      <div class="container container--full-width">
+          <p>{{ description }}</p>
+      </div>
+  </div>
+{% endmacro %}
+
+{% macro previewProject(title, description, width='quarter', video=false, img="project-default.jpg", imgCover=false) %}
+    <a class="works__preview works__preview--{{width}} preview preview--project fade-in__animated-start" href="project.html">
+        <div class="preview__text">
+            <h3 class="preview__title">{{ title }}</h3>
+            <h4 class="preview__description">{{ description }}</h4>
+            <h5 class="preview__category">Project&ensp;<span>/Brand Architechture</span>&ensp;<span>/Event</span></h5>
+        </div>
+        <div class="preview__imaged">
+            {% if video %}
+                <div class="preview__play">
+                    <img src="img/icon-play-black.svg" alt="">
+                </div>
+            {% endif %}
+            {% if imgCover %}
+                <div class="preview__img-cover">
+                    <img class="preview__img-cover--negative" src="img/project-img-cover-black.png" alt="">
+                    <img class="preview__img-cover--positive" src="img/project-img-cover.png" alt="">
+                </div>
+            {% endif %}
+            <div class="preview__img">
+                <img src="img/{{ img }}" alt="">
+            </div>
+        </div>
+    </a>
+{% endmacro %}
+
+{% macro previewImage(width='quarter', imgCover=false) %}
+  <div class="works__preview works__preview--{{width}} preview preview--image fade-in__animated-start">
+      <div class="preview__imaged">
+          {% if imgCover %}
+              <div class="preview__img-cover">
+                  <img class="preview__img-cover--negative" src="img/project-img-cover-black.png" alt="">
+                  <img class="preview__img-cover--positive" src="img/project-img-cover.png" alt="">
+              </div>
+          {% endif %}
+      </div>
+  </div>
+{% endmacro %}
+
+{% macro previewMagazine(title, details, category, img="project-default.jpg", imgCover=false, openLeft=false) %}
+    <div class="works__preview works__preview--quarter preview preview--magazine hovered fade-in__animated-start" data-open-to="{% if openLeft %}left{% else %}right{% endif %}">
+        <div class="preview__wide">
+            <div class="preview__half" data-open-info>
+                <div class="preview__text">
+                    <h3 class="preview__title">{{ title }}</h3>
+                    <h4 class="preview__details">{{ details }}</h4>
+                    <h5 class="preview__category">Magazine&ensp;<span>/{{ category }}</span>
+                        <span class="preview__icon">{% include 'img/_icon-plus.twig' %}</span>
+                    </h5>
+                </div>
+                <div class="preview__imaged">
+                    {% if imgCover %}
+                        <div class="preview__img-cover">
+                            <img class="preview__img-cover--negative" src="img/project-img-cover.png" alt="">
+                            <img class="preview__img-cover--positive" src="img/project-img-cover-black.png" alt="">
+                        </div>
+                    {% endif %}
+                    <div class="preview__img">
+                        <img src="img/{{ img }}" alt="">
+                    </div>
+                    <div class="preview__label">
+                        {% include 'img/_brand-dispatch-label.twig' %}
+                    </div>
+                </div>
+            </div>
+            <div class="preview__half">
+                <div class="preview__info">
+                    <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}

@@ -1,0 +1,38 @@
+<header class="header header--no-scrolled{% if pageName == 'homePage' %} header--special-toggling{% endif %}" id="header">
+    <div class="header__opening">
+        <span class="header__positive-opening"></span>
+        <span class="header__negative-opening"></span>
+    </div>
+    <div class="header__container container">
+        <div class="header__left">
+            <button class="header__time" data-invert-colors>
+                {# {% include 'img/_icon-time.twig' %} #}
+                {% include 'img/_icon-invert.twig' %}
+                {# <span>18:14:25</span> #}
+                <span>Invert colors</span>
+            </button>
+        </div>
+        <div class="header__center">
+            <a class="header__logo" href="/">
+                {% include 'img/_logo.twig' %}
+            </a>
+        </div>
+        <div class="header__right">
+            <button class="header__hamburger" data-open-menu>
+                {% include 'img/_hamburger.twig' %}
+            </button>
+        </div>
+    </div>
+    <div class="header__menu header__menu--hidden">
+        <div class="menu__container container">
+            <ul class="menu__list">
+                <li><a href="work.html"><span><span>Work</span></span></a></li>
+                <li><a href="about.html"><span><span>About</span></span></a></li>
+                <li><a href="contacts.html"><span><span>Contact</span></span></a></li>
+            </ul>
+        </div>
+        {% set subscribeMessageId = 'header-subscribe-message' %}
+        {% include 'blocks/_subscribe-message.twig' %}
+        {% include 'blocks/_footer.twig' %}
+    </div>
+</header>

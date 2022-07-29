@@ -1,0 +1,25 @@
+{% set partners = [
+  'Artemide', '1000Miglia', 'Altagamma', 'Gelato d’Italia', 'Golfera', 'Supernovas', 'Allianz', 'Barilla', 'UniCredit', 'CheBanca', 'Bestway', '5Vie', 'Lavazza', 'Samsung', 'Rai', 'Mediaset', 'Wind', 'Edison', 'Centuria'
+] %}
+
+<div class="partners">
+    <div class="container container--full-width">
+        <div class="page-title">
+            <h2>We worked with</h2>
+        </div>
+        <div class="page-description fade-in__container--group">
+            <p id="partners-list">
+                {% for partner in partners %}
+                    <a href="project.html" class="one-line" data-partners-hover data-template="partner-image-{{ loop.index }}"><span class="fade-in__container fade-in__animated-start">/{{ partner }}&nbsp;</span></a>
+                {% endfor %}
+            </p>
+            <div style="display:none">
+                {% for partner in partners %}
+                    <div class="partners-hover" id="partner-image-{{ loop.index }}">
+                        <img class="partners-hover__img" src="img/partners-tooltip-{{ loop.index }}.jpg" alt="">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

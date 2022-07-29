@@ -1,0 +1,53 @@
+.partners {
+  .page-description {
+    p {
+      display: flex;
+      padding-bottom: 0;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+  }
+
+  .fade-in__animated-start {
+    display: inline-block;
+  }
+}
+
+[data-partners-hover] {
+  transition: opacity .4s ease-out;
+
+  &:hover {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.partners-hover {
+  transform: translateY(50%);
+}
+
+.partners-hover__img {
+  animation: showPartner .3s ease-out;
+}
+
+.partners-hover__img--disappear {
+  animation: disappearPartner .3s ease-out;
+}
+
+@keyframes showPartner {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes disappearPartner {
+  from {
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    clip-path: inset(0 100% 0 0);
+  }
+}

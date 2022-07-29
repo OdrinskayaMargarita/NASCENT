@@ -1,0 +1,33 @@
+.hidden-image {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    border: 1px solid currentColor;
+    background-color: $color-3;
+  }
+}
+
+.page-title {
+  + .hidden-image {
+    margin-top: 154px;
+  }
+}
+
+.hidden-image__img {
+  display: block;
+  width: 100%;
+}
+
+.hidden-image {
+  .plyr__control,
+  .plyr__controls {
+    display: none !important;
+  }
+}

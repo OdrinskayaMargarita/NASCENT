@@ -1,0 +1,42 @@
+.page-description {
+  font-size: 60px;
+  line-height: (72/60);
+  font-weight: 300;
+  @media (min-width: 2160px) {
+    font-size: 75px;
+  }
+  @media (max-width: $xl) {
+    font-size: 44px;
+  }
+  @media (max-width: $lg) {
+    font-size: 36px;
+  }
+  @media (max-width: $md) {
+    font-size: 30px;
+  }
+  @media (max-width: $sm) {
+    font-size: 22.5px;
+  }
+
+  p {
+    padding: 55px 30px;
+    @media (min-width: 1760px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @media (min-width: 2160px) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    @media (max-width: $lg) {
+      padding: 45px 15px;
+    }
+    @media (max-width: $sm) {
+      padding: 18px 15px;
+    }
+  }
+
+  .one-line {
+    white-space: nowrap;
+  }
+}

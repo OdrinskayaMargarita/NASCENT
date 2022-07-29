@@ -1,0 +1,85 @@
+.project-carousel {
+  color: $color-1;
+
+  .swiper-slide {
+    img {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      @include object-fit(cover);
+      @media (orientation: portrait) {
+        height: 50vh;
+      }
+    }
+  }
+}
+
+.project-carousel__nav {
+  top: auto;
+  bottom: calc(50% + 16px);
+  margin: 0;
+  width: 74px;
+  height: 52px;
+  @media (min-width: 2160px) {
+    width: 97px;
+    height: 88px;
+  }
+  @media (max-width: $lg) {
+    bottom: calc(50% - 20px);
+    width: 40px;
+  }
+  @media (max-width: $sm) {
+    display: none;
+  }
+
+  &.swiper-button-prev {
+    left: 30px;
+    @media (max-width: $lg) {
+      left: 20px;
+    }
+  }
+  &.swiper-button-next {
+    right: 30px;
+    @media (max-width: $lg) {
+      right: 20px;
+    }
+  }
+}
+
+.project-carousel__nav--mouse {
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  background-image: none;
+
+  &.swiper-button-prev {
+    left: 0;
+  }
+  &.swiper-button-next {
+    right: 0;
+  }
+}
+
+.project-carousel__pagination {
+  left: 30px;
+  bottom: 30px;
+  width: auto;
+  text-align: left;
+  font-size: 18px;
+  @media (min-width: 2160px) {
+    left: 60px;
+    bottom: 60px;
+    font-size: 30px;
+  }
+  @media (max-width: $lg) {
+    left: 20px;
+    bottom: 20px;
+    font-size: 14px;
+  }
+
+  .swiper-pagination-total {
+    &::before {
+      content: "— ";
+    }
+  }
+}

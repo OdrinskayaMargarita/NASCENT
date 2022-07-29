@@ -1,0 +1,11 @@
+.fade-in__animated-start {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: .7s ease-out;
+  transition-property: transform, opacity;
+}
+
+.fade-in__animated-finish {
+  transform: translateY(0);
+  opacity: 1;
+}

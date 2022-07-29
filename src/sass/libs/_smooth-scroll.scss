@@ -1,0 +1,13 @@
+.scrollbar-track,
+.scrollbar-thumb {
+  @media (max-width: $lg) {
+    width: 4px !important;
+    opacity: .4;
+  }
+}
+
+.scrollbar-track {
+  @media (max-width: $lg) {
+    background-color: transparent !important;
+  }
+}

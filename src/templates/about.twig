@@ -1,0 +1,18 @@
+---
+title: About - Nascent
+description: About description
+pageName: aboutPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {{ blocks.pageTitle('We are agents of transformation') }}
+        {% include './sections/_video.twig' %}
+        {% include './sections/_quote.twig' %}
+        {% include './sections/_just-text.twig' %}
+        {% include './sections/_specialization.twig' %}
+        {% include './sections/_partners.twig' %}
+        {% include './sections/_awards.twig' %}
+    </main>
+{% endblock %}

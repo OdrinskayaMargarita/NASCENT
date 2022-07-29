@@ -1,0 +1,36 @@
+{% import "mixins/_buttons.twig" as button %}
+{% import "mixins/_blocks.twig" as blocks %}
+
+<!doctype html>
+<html lang="en">
+
+{% include "./_head.twig" %}
+
+<body data-barba="wrapper">
+
+    {% include 'blocks/_cursor.twig' %}
+    {% include 'blocks/_page-transition.twig' %}
+
+    <div class="global-wrapper" data-barba="container" data-barba-namespace="{{ pageName }}">
+        {% include 'blocks/_opening.twig' %}
+        {% include "blocks/_header.twig" %}
+
+        <div class="scroll-wrapper">
+            <div class="main-wrapper">
+                {% block content %}{% endblock %}
+
+                {% set footer = true %}
+                {% set subscribeMessageId = 'footer-subscribe-message' %}
+                {% include 'blocks/_subscribe-message.twig' %}
+                {% set copyright = true %}
+                {% include 'blocks/_footer.twig' %}
+            </div>
+        </div>
+    </div>
+
+    {#{% include "blocks/_svg-defs.twig" %}#}
+
+    <script src="/js/app.js"></script>
+
+</body>
+</html>

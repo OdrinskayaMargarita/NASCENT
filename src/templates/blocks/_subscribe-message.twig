@@ -1,0 +1,16 @@
+<div class="subscribe-message{% if footer %} subscribe-message--footer{% endif %}">
+    <div class="container--full-width container">
+        <div class="subscribe-message__container">
+            <div class="subscribe-message__carousel swiper-container" id="{{ subscribeMessageId }}">
+                <div class="swiper-wrapper">
+                    {% for i in range(0, 3) %}
+                        <div class="subscribe-message__message swiper-slide">
+                            {% include 'img/_arrow-right.twig' %}
+                            <p>Click to subscribe to our monthly newsletter — The Brand Dispatch</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

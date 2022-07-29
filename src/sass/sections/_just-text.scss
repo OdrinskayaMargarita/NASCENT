@@ -1,0 +1,35 @@
+.just-text {
+  margin-top: 100px;
+  @media (max-width: $lg) {
+    margin-top: 60px;
+  }
+  @media (max-width: $sm) {
+    margin-top: 30px;
+  }
+}
+
+.just-text__content {
+  padding: 0 30px;
+  font-size: 28px;
+  line-height: (39/28);
+  font-weight: 300;
+  @media (min-width: 2160px) {
+    font-size: 36px;
+  }
+  @media (max-width: $lg) {
+    padding: 0 15px;
+    font-size: 22px;
+  }
+  @media (max-width: $sm) {
+    font-size: 14px;
+  }
+}
+
+.just-text__content--specialization {
+  margin-top: 58px;
+  margin-bottom: 60px;
+  @media (max-width: $sm) {
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+}

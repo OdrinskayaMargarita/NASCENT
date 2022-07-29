@@ -1,0 +1,20 @@
+---
+title: Project - Nascent
+description: Project description
+pageName: projectPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {{ blocks.pageTitle('Next Design Perspectives 2019') }}
+        {{ blocks.pageDescription('New trends in design') }}
+        {% include './sections/_video.twig' %}
+        {{ blocks.pageDescription('Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.') }}
+        {% include './sections/_project-extra.twig' %}
+        {% include './sections/_image-full-width.twig' %}
+        {% include './sections/_images-layout.twig' %}
+        {% include './sections/_project-carousel.twig' %}
+        {% include './sections/_image-description-layout.twig' %}
+    </main>
+{% endblock %}

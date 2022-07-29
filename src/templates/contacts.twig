@@ -1,0 +1,13 @@
+---
+title: Contacts - Nascent
+description: Contacts description
+pageName: contactPage
+---
+
+{% extends 'layouts/_page-default.twig' %}
+{% block content %}
+    <main>
+        {{ blocks.pageTitle('Contacts') }}
+        {% include './sections/_contacts.twig' %}
+    </main>
+{% endblock %}
